@@ -3,9 +3,6 @@ package telran.java2022.book.dao;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.data.jpa.repository.Query;
-
-import telran.java2022.book.model.Author;
 import telran.java2022.book.model.Publisher;
 
 public interface PublisherRepository {

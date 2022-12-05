@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import telran.java2022.book.model.Author;
-import telran.java2022.book.model.Book;
 
 @Repository
 public class AuthorRepositoryImpl implements AuthorRepository {

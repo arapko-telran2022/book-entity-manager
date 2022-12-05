@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import telran.java2022.book.model.Author;
 import telran.java2022.book.model.Publisher;
 
 @Repository
@@ -42,8 +41,7 @@ public class PublisherRepositoryImpl implements PublisherRepository {
 
 	@Override
 	public boolean existsById(String publisherName) {
-		// TODO Auto-generated method stub
-		return false;
+		return em.find(Publisher.class, publisherName) != null;
 	}
 	
 	@Override
