@@ -54,7 +54,6 @@ public class BookRepositoryImpl implements BookRepository {
 	@Transactional
 	public void delete(Book book) {
 		em.remove(book);
-
 	}
 
 	@Override
