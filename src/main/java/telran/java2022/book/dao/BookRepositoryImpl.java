@@ -22,14 +22,14 @@ public class BookRepositoryImpl implements BookRepository {
 	public Stream<Book> findByPublisherPublisherName(String publisherName) {
 		TypedQuery<Book> query = em.createQuery("SELECT DISTINCT b FROM Book b WHERE b.publisher.publisherName =?1", Book.class);
 		query.setParameter(1, publisherName);
-		return query.getResultList().stream();
+		return query.getResultStream();
 	}
 
 	@Override
 	public Stream<Book> findByAuthorsName(String authorName) {
 		TypedQuery<Book> query = em.createQuery("SELECT DISTINCT b FROM Book b JOIN b.authors a WHERE a.name =?1", Book.class);
 		query.setParameter(1, authorName);
-		return query.getResultList().stream();
+		return query.getResultStream();
 	}
 
 	@Override
